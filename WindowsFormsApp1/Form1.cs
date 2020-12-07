@@ -1,15 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 using System.IO;
-using System.Threading;
 
 namespace WindowsFormsApp1
 {
@@ -91,7 +85,8 @@ namespace WindowsFormsApp1
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            string filePath = "";
+            Program.CMD("/C jupyter notebook " + filePath);
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

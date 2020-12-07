@@ -85,7 +85,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\RefreshEnv.cmd" />
-    <None Include="Resources\resetvars.bat" />
     <None Include="Resources\Screenshot 2020-12-06 190601.png" />
   </ItemGroup>
   <ItemGroup>
@@ -114,9 +113,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Screenshot 2020-12-06 190613.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\resetvars.vbs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
