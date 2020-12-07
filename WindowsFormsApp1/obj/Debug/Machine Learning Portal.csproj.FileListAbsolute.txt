@@ -1,10 +1,10 @@
 D:\Mitchell\Documents\GitHub\Machine Learning Portal\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
 D:\Mitchell\Documents\GitHub\Machine Learning Portal\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
 D:\Mitchell\Documents\GitHub\Machine Learning Portal\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
-D:\Mitchell\Documents\GitHub\Machine Learning Portal\WindowsFormsApp1\obj\Debug\Machine Learning Portal.csprojAssemblyReference.cache
 D:\Mitchell\Documents\GitHub\Machine Learning Portal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
 D:\Mitchell\Documents\GitHub\Machine Learning Portal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
 D:\Mitchell\Documents\GitHub\Machine Learning Portal\WindowsFormsApp1\obj\Debug\Machine Learning Portal.csproj.GenerateResource.cache
 D:\Mitchell\Documents\GitHub\Machine Learning Portal\WindowsFormsApp1\obj\Debug\Machine Learning Portal.csproj.CoreCompileInputs.cache
 D:\Mitchell\Documents\GitHub\Machine Learning Portal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 D:\Mitchell\Documents\GitHub\Machine Learning Portal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+D:\Mitchell\Documents\GitHub\Machine Learning Portal\WindowsFormsApp1\obj\Debug\Machine Learning Portal.csprojAssemblyReference.cache

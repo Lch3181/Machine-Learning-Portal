@@ -81,6 +81,26 @@ namespace WindowsFormsApp1.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to @echo off
+        ///::
+        ///:: RefreshEnv.cmd
+        ///::
+        ///:: Batch file to read environment variables from registry and
+        ///:: set session variables to these values.
+        ///::
+        ///:: With this batch file, there should be no need to reload command
+        ///:: environment every time you want environment changes to propagate
+        ///
+        ///::echo &quot;RefreshEnv.cmd only works from cmd.exe, please install the Chocolatey Profile to take advantage of refreshenv from PowerShell&quot;
+        ///echo | set /p dummy=&quot;Refreshing environment variables from registry for cmd.exe. Please w [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string RefreshEnv {
+            get {
+                return ResourceManager.GetString("RefreshEnv", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Screenshot_2020_12_06_190410 {

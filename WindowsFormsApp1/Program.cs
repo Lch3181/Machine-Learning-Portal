@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.Net;
 
 namespace WindowsFormsApp1
 {
@@ -15,16 +16,12 @@ namespace WindowsFormsApp1
         [STAThread]
         static void Main()
         {
-            //Check dependency
-            MessageBox.Show(CheckDependency("/C python --version"));
-            MessageBox.Show(CheckDependency("/C pip --version"));
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
         }
 
-        static string CheckDependency(string input)
+        public static string CMD(string input)
         {
             Process cmd = new Process();
             cmd.StartInfo.FileName = "cmd.exe";
@@ -39,7 +36,9 @@ namespace WindowsFormsApp1
             cmd.StandardInput.Flush();
             cmd.StandardInput.Close();
             cmd.WaitForExit();
+            Console.WriteLine(output);
             return output;
         }
+
     }
 }
