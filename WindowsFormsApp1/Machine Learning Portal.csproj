@@ -24,7 +24,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -117,9 +117,7 @@
     <None Include="Resources\1200px-Linear_regression.svg.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\Machine Learning Portal.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <None Include="Resources\Machine Learning Portal.zip" />
     <None Include="Resources\RefreshEnv.cmd">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
