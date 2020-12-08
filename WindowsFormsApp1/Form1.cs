@@ -25,9 +25,9 @@ namespace WindowsFormsApp1
             dependencies.Add("python", "python --version");
             dependencies.Add("pip", "pip --version");
             dependencies.Add("notebook", "pip install notebook");
-            dependencies.Add("Numpy", "pip install 'Numpy==1.19.3'");
+            dependencies.Add("Numpy", "pip install Numpy==1.19.2");
             dependencies.Add("Scipy", "pip install Scipy");
-            dependencies.Add("Pandas", "pip install Pandas");
+            dependencies.Add("Pandas", "pip install Pandas==1.1.2");
             dependencies.Add("Statsmodels", "pip install Statsmodels");
             dependencies.Add("Matplotlib", "pip install Matplotlib");
             dependencies.Add("Scikit-learn", "pip install Scikit-learn");
