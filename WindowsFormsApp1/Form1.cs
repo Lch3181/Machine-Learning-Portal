@@ -46,7 +46,7 @@ namespace WindowsFormsApp1
             //Program.CMD("/C " + @"Resources\RefreshEnv.cmd");
 
             progressBar1.Maximum = dependencies.Count;
-            string pipList = Program.CMD("/C " + "pip list");
+            string pipList = Program.CMD("/C " + "pip list").ToLower();
             foreach (KeyValuePair<string, string> dependency in dependencies)
             {
                 progressBar1.Value++;
@@ -63,7 +63,7 @@ namespace WindowsFormsApp1
                         done = true;
                         break;
                     default:
-                        if (pipList.Contains(dependency.Key.ToLower()) || pipList.Contains(dependency.Key))
+                        if (pipList.Contains(dependency.Key.ToLower()))
                             break;
                         label11.Text = "Installing " + dependency.Key;
                         Refresh();
