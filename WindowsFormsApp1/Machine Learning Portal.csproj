@@ -33,8 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -84,7 +86,12 @@
     <None Include="Resources\1200px-Linear_regression.svg.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RefreshEnv.cmd" />
+    <None Include="Resources\Machine Learning Portal.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\RefreshEnv.cmd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Resources\Screenshot 2020-12-06 190601.png" />
   </ItemGroup>
   <ItemGroup>

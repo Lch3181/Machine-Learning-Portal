@@ -4,11 +4,14 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using System.Net;
 using System.IO;
+using System.IO.Compression;
 
 namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
+        string Dir = string.Format(@"{0}\JupyterNotebook\Machine Learning Portal", Environment.GetFolderPath(Environment.SpecialFolder.UserProfile));
+
         public Form1()
         {
             InitializeComponent();
@@ -39,9 +42,7 @@ namespace WindowsFormsApp1
             dependencies.Add("NetworkX", "pip install NetworkX");
 
             //refresh environment variables, not working
-            string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
-            string refreshEnvPath = string.Format("\"{0}Resources\\RefreshEnv.cmd\"", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
-            Program.CMD("/C " + refreshEnvPath);
+            Program.CMD("/C " + @"Resources\RefreshEnv.cmd");
 
             progressBar1.Maximum = dependencies.Count;
             string pipList = Program.CMD("/C " + "pip list");
@@ -66,6 +67,11 @@ namespace WindowsFormsApp1
                         label11.Text = "Installing " + dependency.Key;
                         Refresh();
                         Program.CMD("/C " + dependency.Value);
+
+                        if (dependency.Key == "notebook")
+                        {
+                            JupyterConfig();
+                        }
                         break;
                 }
                 if (done)
@@ -78,6 +84,16 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void JupyterConfig()
+        {
+            //create jupyter notebook startup dir
+            string path = string.Format(@"{0}\JupyterNotebook", Environment.GetFolderPath(Environment.SpecialFolder.UserProfile));
+            DirectoryInfo directoryInfo = Directory.CreateDirectory(path);
+
+            //unzip jupyter files in startup dir
+            ZipFile.ExtractToDirectory(@"Resources\Machine Learning Portal.zip", directoryInfo.FullName + @"\Machine Learning Portal");
+        }
+
         private void Form1_Shown1(object sender, EventArgs e)
         {
             CheckDependency();
@@ -85,53 +101,62 @@ namespace WindowsFormsApp1
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            string filePath = "";
-            Program.CMD("/C jupyter notebook " + filePath);
+            string filePath = @"\Linear Regression";
+            Program.Jupyter("/C jupyter notebook \"" + Dir + filePath + "\"");
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-
+            string filePath = @"\Logistic Regression";
+            Program.Jupyter("/C jupyter notebook \"" + Dir + filePath + "\"");
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-
+            string filePath = @"\Bayesian Classifcation";
+            Program.Jupyter("/C jupyter notebook \"" + Dir + filePath + "\"");
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-
+            string filePath = @"\Decision Tree & Random Forest";
+            Program.Jupyter("/C jupyter notebook \"" + Dir + filePath + "\"");
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-
+            string filePath = @"\Decision Tree & Random Forest";
+            Program.Jupyter("/C jupyter notebook \"" + Dir + filePath + "\"");
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-
+            string filePath = @"\Cluster Analysis";
+            Program.Jupyter("/C jupyter notebook \"" + Dir + filePath + "\"");
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-
+            string filePath = @"\Fuzzy Data Matching";
+            Program.Jupyter("/C jupyter notebook \"" + Dir + filePath + "\"");
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-
+            string filePath = @"\Multi-Layer Nerural Networks";
+            Program.Jupyter("/C jupyter notebook \"" + Dir + filePath + "\"");
         }
 
         private void pictureBox9_Click(object sender, EventArgs e)
         {
-
+            string filePath = @"\Linear Programming";
+            Program.Jupyter("/C jupyter notebook \"" + Dir + filePath + "\"");
         }
 
         private void pictureBox10_Click(object sender, EventArgs e)
         {
-
+            string filePath = @"\Massively Parallel Programming with Spark";
+            Program.Jupyter("/C jupyter notebook \"" + Dir + filePath + "\"");
         }
         public void InstallPython()
         {

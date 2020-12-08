@@ -8,3 +8,5 @@ D:\Mitchell\Documents\GitHub\Machine Learning Portal\WindowsFormsApp1\obj\Debug\
 D:\Mitchell\Documents\GitHub\Machine Learning Portal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 D:\Mitchell\Documents\GitHub\Machine Learning Portal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 D:\Mitchell\Documents\GitHub\Machine Learning Portal\WindowsFormsApp1\obj\Debug\Machine Learning Portal.csprojAssemblyReference.cache
+D:\Mitchell\Documents\GitHub\Machine Learning Portal\WindowsFormsApp1\bin\Debug\Resources\RefreshEnv.cmd
+D:\Mitchell\Documents\GitHub\Machine Learning Portal\WindowsFormsApp1\bin\Debug\Resources\Machine Learning Portal.zip

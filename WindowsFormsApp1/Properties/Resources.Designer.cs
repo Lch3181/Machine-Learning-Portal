@@ -81,6 +81,16 @@ namespace WindowsFormsApp1.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Machine_Learning_Portal {
+            get {
+                object obj = ResourceManager.GetObject("Machine_Learning_Portal", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to @echo off
         ///::
         ///:: RefreshEnv.cmd
