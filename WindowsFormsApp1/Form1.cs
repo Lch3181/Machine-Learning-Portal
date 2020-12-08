@@ -42,7 +42,7 @@ namespace WindowsFormsApp1
             dependencies.Add("NetworkX", "pip install NetworkX");
 
             //refresh environment variables, not working
-            Program.CMD("/C " + @"Resources\RefreshEnv.cmd");
+            //Program.CMD("/C " + @"Resources\RefreshEnv.cmd");
 
             progressBar1.Maximum = dependencies.Count;
             string pipList = Program.CMD("/C " + "pip list");
@@ -80,7 +80,7 @@ namespace WindowsFormsApp1
             if(!done)
             {
                 progressBar1.Value = progressBar1.Maximum;
-                label11.Text = "Done";
+                label11.Text = "Ready";
             }
         }
 
