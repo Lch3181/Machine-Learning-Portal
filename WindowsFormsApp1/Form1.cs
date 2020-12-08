@@ -25,7 +25,7 @@ namespace WindowsFormsApp1
             dependencies.Add("python", "python --version");
             dependencies.Add("pip", "pip --version");
             dependencies.Add("notebook", "pip install notebook");
-            dependencies.Add("Numpy", "pip install Numpy");
+            dependencies.Add("Numpy", "pip install 'Numpy==1.19.3'");
             dependencies.Add("Scipy", "pip install Scipy");
             dependencies.Add("Pandas", "pip install Pandas");
             dependencies.Add("Statsmodels", "pip install Statsmodels");
@@ -40,6 +40,7 @@ namespace WindowsFormsApp1
             dependencies.Add("Bokeh", "pip install Bokeh");
             //dependencies.Add("Basemap", "pip install Basemap");
             dependencies.Add("NetworkX", "pip install NetworkX");
+            dependencies.Add("pulp", "pip install pulp");
 
             //refresh environment variables, not working
             //Program.CMD("/C " + @"Resources\RefreshEnv.cmd");
@@ -160,7 +161,7 @@ namespace WindowsFormsApp1
         }
         public void InstallPython()
         {
-            string fileName = "python-3.7.9-amd64.exe";
+            string fileName = "python-3.8.5-amd64.exe";
             string downloadFolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\Downloads";
 
             try
@@ -174,7 +175,7 @@ namespace WindowsFormsApp1
                 progressBar1.Value = 0;
                 progressBar1.Maximum = 100;
                 WebClient webClient = new WebClient();
-                webClient.DownloadFileAsync(new System.Uri("https://www.python.org/ftp/python/3.7.9/python-3.7.9-amd64.exe"),
+                webClient.DownloadFileAsync(new System.Uri("https://www.python.org/ftp/python/3.8.5/python-3.8.5-amd64.exe"),
                     downloadFolder + "\\" + fileName);
                 webClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(DownloadProgressChanged);
                 webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(DownloadFileCompleted);
@@ -196,7 +197,7 @@ namespace WindowsFormsApp1
         }
         public void DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
-            string fileName = "python-3.7.9-amd64.exe";
+            string fileName = "python-3.8.5-amd64.exe";
             string downloadFolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\Downloads";
             if (e.Error == null)
             {
