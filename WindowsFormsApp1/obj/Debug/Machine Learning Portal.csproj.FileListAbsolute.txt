@@ -12,5 +12,5 @@ D:\Mitchell\Documents\GitHub\Machine Learning Portal\WindowsFormsApp1\obj\Debug\
 D:\Mitchell\Documents\GitHub\Machine Learning Portal\WindowsFormsApp1\obj\Debug\Machine Learning Portal.application
 D:\Mitchell\Documents\GitHub\Machine Learning Portal\WindowsFormsApp1\obj\Debug\Machine Learning Portal.exe
 D:\Mitchell\Documents\GitHub\Machine Learning Portal\WindowsFormsApp1\obj\Debug\Machine Learning Portal.pdb
-D:\Mitchell\Documents\GitHub\Machine Learning Portal\WindowsFormsApp1\bin\Debug\Resources\Machine Learning Portal.zip
 D:\Mitchell\Documents\GitHub\Machine Learning Portal\WindowsFormsApp1\bin\Debug\Resources\RefreshEnv.cmd
+D:\Mitchell\Documents\GitHub\Machine Learning Portal\WindowsFormsApp1\bin\Debug\Resources\Machine Learning Portal.zip
